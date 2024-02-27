@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Talk
   m_EditorClassIdentifier: 
   dialogueContents:
-  - ID: 
+  - ID: 1
     character: {fileID: 0}
-    text: 
+    text: "\u4F60\u597D"
     options: []

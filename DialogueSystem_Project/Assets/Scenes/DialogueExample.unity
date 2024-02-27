@@ -148,7 +148,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1307909045}
   m_Father: {fileID: 2004277516}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
@@ -298,7 +299,7 @@ GameObject:
   - component: {fileID: 1084161269}
   - component: {fileID: 1084161268}
   m_Layer: 5
-  m_Name: Dialogue_Character
+  m_Name: Dialogue_Cimage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -460,11 +461,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2004277516}
+  m_Father: {fileID: 395294448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.1000977, y: 2.5424194}
+  m_AnchoredPosition: {x: 4.1000977, y: 2.5428772}
   m_SizeDelta: {x: -55.3301, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1307909046
@@ -635,7 +636,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2004277516}
   - component: {fileID: 2004277519}
-  - component: {fileID: 2004277517}
   - component: {fileID: 2004277520}
   m_Layer: 5
   m_Name: DialoguePanel
@@ -658,7 +658,6 @@ RectTransform:
   m_Children:
   - {fileID: 1084161267}
   - {fileID: 395294448}
-  - {fileID: 1307909045}
   m_Father: {fileID: 1666819929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -666,18 +665,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 140.6709}
   m_SizeDelta: {x: 1920, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2004277517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2004277515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e78cc9510144e449b024c2defe721ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &2004277519
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -695,11 +682,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2004277515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Script: {fileID: 11500000, guid: b23f8202e1b453a4fb0d04d0e8d23108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
-  m_VerticalFit: 2
+  characterImage: {fileID: 1084161268}
+  dialogueText: {fileID: 1307909046}
+  nextButton: {fileID: 0}
+  current_DialogueData: {fileID: 11400000, guid: e5b01d552a4451040a2bfcf859a5255c, type: 2}
+  currentIndex: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
