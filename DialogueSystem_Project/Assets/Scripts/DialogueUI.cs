@@ -3,12 +3,15 @@ using UnityEngine.UI;
 using DG.Tweening;
 public class DialogueUI : MonoBehaviour
 {
-    [Header("组件")]
+    [Header("自身组件")]
     public Image characterImage;
     public Text dialogueText;
     public Button nextButton;
     public GameObject dialoguePanel;
-    public GameObject optionPanel;
+    [Header("选项组件")]
+    public RectTransform optionPanel;
+    public GameObject optionPrefab;
+
 
     [Header("数据")]
     public DialogueData_SO current_DialogueData;
@@ -16,6 +19,7 @@ public class DialogueUI : MonoBehaviour
     private void Start()
     {
         OpenDialogue();
+
     }
 
 
@@ -28,6 +32,7 @@ public class DialogueUI : MonoBehaviour
         dialogueText.text = " ";
         dialogueText.DOText(dialogue.text, 1f);
         CheckIndex();
+        CreateOption(dialogue);
     }
 
 
@@ -52,6 +57,7 @@ public class DialogueUI : MonoBehaviour
         dialoguePanel.SetActive(true);
         UpdateDialogueText(current_DialogueData.dialogueContents[currentIndex]);
         CheckIndex();
+
     }
 
 
@@ -68,6 +74,21 @@ public class DialogueUI : MonoBehaviour
         else
         {
             dialoguePanel.SetActive(false);
+        }
+    }
+
+
+    /// <summary>
+    /// 创建选项
+    /// </summary>
+    /// <param name="dialogueContent">对话数据</param> 
+    public void CreateOption(DialogueContent dialogueContent)
+    {
+        Debug.Log(dialogueContent.options.Count);
+        for (int i = 0; i < dialogueContent.options.Count; i++)
+        {
+            GameObject option = Instantiate(optionPrefab, optionPanel);
+            option.GetComponent<DialogueOptionUI>().UpdateOptionText(dialogueContent, dialogueContent.options[i]);
         }
     }
 }
