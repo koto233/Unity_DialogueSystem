@@ -15,5 +15,22 @@ MonoBehaviour:
   dialogueContents:
   - ID: 1
     character: {fileID: 0}
-    text: "\u4F60\u597D"
-    options: []
+    text: 111111111111111
+    options:
+    - describe: 
+      targetID: 
+      isTakeQuset: 0
+  - ID: 2
+    character: {fileID: 0}
+    text: 222222222222222
+    options:
+    - describe: 
+      targetID: 
+      isTakeQuset: 0
+  - ID: 3
+    character: {fileID: 0}
+    text: 333333333333333
+    options:
+    - describe: 
+      targetID: 
+      isTakeQuset: 0
